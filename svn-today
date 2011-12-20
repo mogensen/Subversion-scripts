@@ -1,0 +1,8 @@
+#!/bin/bash
+
+date1=`date +%F`
+date2=$date1
+echo "Looking for changes from $date1 00:00 to $date2 23:59"
+
+# Find all svn revision numbers made today
+svn log -r {"$date1 00:00"}:{"$date2 23:59"}
